@@ -1,0 +1,20 @@
+<!-- Generated template for the EditComponent component -->
+<ion-header>
+
+  <ion-navbar>  
+    <ion-title>edycja</ion-title>    
+    <ion-buttons start> 
+      <button ion-button icon-only  (click)="close()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>     
+     </ion-buttons>    
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item>
+      <ion-label color="primary" floating>nazwa</ion-label>
+      <ion-input [(ngModel)]="craft.name" (change)="save()"></ion-input>
+    </ion-item>
+</ion-content>

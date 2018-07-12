@@ -1,0 +1,40 @@
+<!--
+  Generated template for the ListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-menu [content]="mainMenu">
+  <ion-content>
+    wybór gotowe / w produkcji
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav #mainMenu [root]="rootPage"></ion-nav>
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>list</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-fab bottom right>
+      <button ion-fab mini (click)="goEdit()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+    <ion-list>
+      <ion-item *ngFor="let craft of crafts" (click)="goDetails(craft.id)">
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/oatmealstout.jpg">
+        </ion-thumbnail>
+        <h2>{{craft.name}}</h2>
+        <p>02 lip 2018</p>
+      </ion-item>
+    </ion-list>
+</ion-content>
+
